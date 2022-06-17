@@ -1,0 +1,41 @@
+
+basepath='/home/awanner/Documents/PostDoc/Manuscripts/2020 x-ray assisted staining/codeExample/ExampleData/';
+in_filename=[basepath filesep 'IAC20220210_B20220208_20190118.txrm'];
+
+TIFpath=[basepath filesep 'TIF' filesep ];
+alignedTIFpath=[TIFpath '/aligned/'];
+boundarypath=[alignedTIFpath filesep '/BoundaryCoords/'];
+
+metadatafile=[basepath filesep 'metadata.mat'];
+displacementfile=[basepath filesep 'pairwise_displacements.mat'];
+densityfile=[basepath filesep 'DensityFile.mat'];
+modelfile=[basepath filesep 'ModelFile.mat'];
+
+%% 
+dooverwrite=1;
+doextract_xrm=1;
+read_metadata=1;
+calc_offsets=1;
+writeAlignedImage=1;
+Step01_ExtractTXRM;
+
+%% 
+doRadialProjectionCorrection=true;
+dooverwrite=true;
+% doplot=1;
+% dosave=0;
+doplot=0;
+dosave=1;
+%the pixel range for detecting the surface of the sample might has to be
+%adapted to the specific sample:
+YStart=1; 
+YEnd=800;
+Step02_DetectSampleSurface;
+
+%%
+Step03_MeasureDiffusion;
+
+%% 
+Step04_ModelDiffusion;
+%% 
+Step05_PlotDiffusionAndModel;
