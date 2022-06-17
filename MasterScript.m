@@ -1,5 +1,5 @@
-basepath='/home/awanner/Documents/PostDoc/Manuscripts/2020 x-ray assisted staining/codeExample/ExampleData/';
-in_filename=[basepath filesep 'IAC20220210_B20220208_20190118.txrm'];
+basepath='YourDefaultPathForData';
+in_filename=[basepath filesep 'YourTXRMofInterest.txrm'];
 
 TIFpath=[basepath filesep 'TIF' filesep ];
 alignedTIFpath=[TIFpath '/aligned/'];
