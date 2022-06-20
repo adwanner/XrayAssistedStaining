@@ -5,8 +5,8 @@ TIFpath=[basepath filesep 'TIF' filesep ];
 alignedTIFpath=[TIFpath '/aligned/'];
 boundarypath=[alignedTIFpath filesep '/BoundaryCoords/'];
 
-metadatafile=[basepath filesep 'metadata.mat'];
-displacementfile=[basepath filesep 'pairwise_displacements.mat'];
+metadatafile=[basepath filesep 'MetaData.mat'];
+displacementfile=[basepath filesep 'PWdisplacements.mat'];
 densityfile=[basepath filesep 'DensityFile.mat'];
 modelfile=[basepath filesep 'ModelFile.mat'];
 
