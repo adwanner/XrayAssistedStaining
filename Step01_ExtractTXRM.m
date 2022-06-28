@@ -19,13 +19,13 @@ if doextract_xrm
     if contains(result,{'error','Error'})
         disp(result);
         if contains(result, 'No module named olefile')
-            disp('Try running "pip2.7 install olefile"');
+            disp('Try running "pip2.7 install --user olefile"');
         end
         if contains(result, 'No module named numpy')
-            disp('Try running "pip2.7 install numpy"');
+            disp('Try running "pip2.7 install --user numpy"');
         end
         if contains(result, 'No module named libtiff')
-            disp('Try running "pip2.7 install libtiff (maybe you need to run "sudo apt-get install python-dev")"');
+            disp('Try running "pip2.7 install --user libtiff (maybe you need to run "sudo apt-get install python-dev")"');
         end
         return;
     end
